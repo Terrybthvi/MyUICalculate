@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ui_with" format="dimension"/>
+    <attr name="ui_height" format="dimension"/>
+</resources>
