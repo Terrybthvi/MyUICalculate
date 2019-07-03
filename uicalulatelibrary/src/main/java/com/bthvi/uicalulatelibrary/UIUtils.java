@@ -87,8 +87,6 @@ public class UIUtils {
             }
             stateBarHeight = getSystemBarHeight(context);
         }
-        System.out.println("=========displayMetricsWidth"+displayMetricsWidth);
-        System.out.println("=========displayMetricsHeight"+displayMetricsHeight);
     }
 
     /**

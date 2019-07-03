@@ -256,4 +256,7 @@ public class ViewCalculateUtil
         layoutParams.rightMargin = UIUtils.getInstance( ).getWidth(rightMargin);
         view.setLayoutParams(layoutParams);
     }
+
+    public static void setViewGroupLayoutParam(View view, int width, int height, int margin_top, int margin_bottom, int margin_left, int margin_right) {
+    }
 }

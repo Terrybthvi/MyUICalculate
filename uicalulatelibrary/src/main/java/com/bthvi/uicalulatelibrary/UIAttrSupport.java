@@ -22,7 +22,7 @@ class UIAttrSupport {
     public static List<View> getLsitViews(Activity activity) {
         List<View> listViews = new ArrayList<>();
         ViewGroup context = (ViewGroup) activity.findViewById(android.R.id.content);
-        addSkinView(context, listViews);
+        addSkinView(context);
         return listViews;
     }
 
@@ -32,16 +32,22 @@ class UIAttrSupport {
      * @param
      * @param
      */
-    private static void addSkinView(View context, List<View> listViews) {
-        List<ViewAttr> viewAttrList = new ArrayList<ViewAttr>();
+    private static void addSkinView(View context) {
         if (context instanceof ViewGroup) {
             ViewGroup viewGroup = (ViewGroup) context;
             for (int i = 0; i < viewGroup.getChildCount(); i++) {
                 View view = viewGroup.getChildAt(i);
-                ViewAttr attr = new ViewAttr(view, context.getWidth(), context.getHeight());
+                System.out.println("if===="+view.getWidth() );
+                ViewAttr attr = new ViewAttr(view);
+                attr.setPadding_left(view.getPaddingLeft());
+                attr.setPadding_top(view.getPaddingTop());
+                attr.setPadding_right(view.getPaddingRight());
+                attr.setPadding_bottom(view.getPaddingBottom());
                 attr.apply();
-                addSkinView(view,listViews);
+                addSkinView(view);
             }
+        }else {
+            System.out.println("else=====");
         }
 
     }
