@@ -60,7 +60,14 @@ public class UIUtils {
             }
         });
     }
-
+    /**
+     * 注册View并适配
+     *
+     * @param activity
+     */
+    public void register(final View layout) {
+        UIAttrSupport.addUICalculateView(layout);
+    }
     private void apply(Activity a) {
         List<View> listViews = UIAttrSupport.getLsitViews(a);
         if (listViews == null) return;
