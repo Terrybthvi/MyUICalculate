@@ -16,6 +16,8 @@
     //根据Activity适配
     UIUtils.getInstance().register(this);
 ```
+适配前如下
 ![未适配](https://github.com/Terrybthvi/MyUICalculate/blob/master/UI%E6%9C%AA%E9%80%82%E9%85%8D.png)
+适配后如下图所示
 ![适配后](https://github.com/Terrybthvi/MyUICalculate/blob/master/UI%E9%80%82%E9%85%8D.png)
 博客链接：[一种非常简单的屏幕适配方案](https://bthvi-leiqi.blog.csdn.net/article/details/95076522)
