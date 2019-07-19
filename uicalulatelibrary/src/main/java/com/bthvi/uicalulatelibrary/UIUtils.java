@@ -160,7 +160,8 @@ public class UIUtils {
      * @return
      */
     public int getHeight(int height) {
-        return Math.round((float)height * displayMetricsHeight / (STANDARD_HEIGHT-stateBarHeight));
+        //TODO 由于手机长宽比例不同可能会出现被压缩  或是被拉伸的情况，为保障控件宽高相同比例的缩放统一使用宽度比例
+        return Math.round((float)height * displayMetricsWidth / STANDARD_WIDTH);
     }
 
 }
